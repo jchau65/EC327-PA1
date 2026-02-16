@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 using namespace std;
 
@@ -52,5 +53,5 @@ int main()
     }
 
     // Print out hamming distance
-    cout << "Hamming distance between " << num1 << " and " << num2 << " when numbers are in ternary format is " << hammingDistance << ".";
+    cout << "Hamming distance between " << num1 << " and " << num2 << " when numbers are in ternary format is " << hammingDistance << "." << endl;
 }

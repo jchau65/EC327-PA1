@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -13,5 +14,5 @@ int main() {
 
     // Calculating distance
     distance = abs((x2 - x1) * (y1 - y3) - (x1 - x3) * (y2 - y1))/sqrt(pow((x2 - x1), 2)+ pow((y2 - y1), 2)); // distance formula
-    cout << "The shortest distance for (" << x3 << "," << y3 << ") to the line composed of (" << x1 << "," << y1 << ") and (" << x2 << "," << y2 << ") is " << distance << "."; // Outputting distance
+    cout << "The shortest distance for (" << x3 << "," << y3 << ") to the line composed of (" << x1 << "," << y1 << ") and (" << x2 << "," << y2 << ") is " << distance << "." << endl; // Outputting distance
 }

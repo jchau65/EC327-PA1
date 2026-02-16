@@ -13,6 +13,13 @@ int main() {
     cout << "Choose Fire(0), Water(1), or Grass(2): ";
     cin >> playerChoice;
 
+    // Filter out invalid choices
+    while (!(playerChoice <= 2 && playerChoice >= 0)) {
+        cout << "Invalid choice." << endl;
+        cout << "Choose Fire(0), Water(1), or Grass(2): ";
+        cin >> playerChoice;
+    }
+
     // Generates a new random seed
     srand(time(0));
 
@@ -88,4 +95,6 @@ int main() {
             }
             break;
     }
+
+    cout << endl;
 }

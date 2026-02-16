@@ -22,11 +22,11 @@ int main() {
             cout << "CRYPTO: "<< 'A';
         }
         else {
-            cout << "CRYPTO: " << (char) (letter + 1);
+            cout << "CRYPTO: " << (char) (letter + 1) << endl;
         }
     }
     
     else {
-        cout << "YOU DID NOT ENTER A LETTER";
+        cout << "YOU DID NOT ENTER A LETTER" << endl;
     }
 }
