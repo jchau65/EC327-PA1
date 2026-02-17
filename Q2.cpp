@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 using namespace std;
 
@@ -50,16 +51,40 @@ int main()
     billPreTip = bill * (1 + (taxRate / 100));
     
     // Calculating tip
-    switch (tipLevel) 
-    {
-        case 1:
-            tip = bill * 0.1;
-        case 2:
-            tip = bill * 0.15;
-        case 3:
-            tip = bill * 0.2;
-        case 4:
-            tip = bill * 0.25;
+    if (tipInt == 1) {
+        switch (tipLevel) 
+        {
+            case 1:
+                tip = billPreTip * 0.1;
+                break;
+            case 2:
+                tip = billPreTip * 0.15;
+                break;
+            case 3:
+                tip = billPreTip * 0.2;
+                break;
+            case 4:
+                tip = billPreTip * 0.25;
+                break;
+        }
+    }
+
+    if (tipInt == 2) {
+        switch (tipLevel) 
+        {
+            case 1:
+                tip = bill * 0.1;
+                break;
+            case 2:
+                tip = bill * 0.15;
+                break;
+            case 3:
+                tip = bill * 0.2;
+                break;
+            case 4:
+                tip = bill * 0.25;
+                break;
+        }
     }
 
     // Round results
@@ -67,12 +92,7 @@ int main()
     tip = round(tip * 100.0) / 100.0;
 
     // Outputting results
-    cout << "The total bill pre-tip is: $" << billPreTip << endl;
-
-    // Only outputs if tip post-tax is selected
-    if (tipInt == 2) 
-    {
-        cout << "The total tip is: $" << tip << endl;
-        cout << "The total bill post-tip is: $" << billPreTip + tip << endl;
-    }
+    cout << "The total bill pre-tip is: $" << fixed << setprecision(2) << billPreTip << endl;
+    cout << "The total tip is: $" << tip << endl;
+    cout << "The total bill post-tip is: $" << fixed << setprecision(2) << billPreTip + tip << endl;
 }
