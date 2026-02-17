@@ -30,7 +30,7 @@ int main()
     // Re-run code if tip level is out of bounds
     while (!(tipLevel >= 1 && tipLevel <= 4)) 
     {
-        cout << "Out of bounds." << endl;
+        cout << "invalid" << endl;
         cout << "Enter tip level (1=10%, 2=15%, 3=20%, 4=25%): ";
         cin >> tipLevel;
     }
@@ -42,7 +42,7 @@ int main()
     // Re-run code if tip code is out of bounds
     while (!(tipInt == 1 || tipInt == 2)) 
     {
-        cout << "Out of bounds." << endl;
+        cout << "invalid" << endl;
         cout << "Tip on post-tax amount? (1=yes, 2=no): ";
         cin >> tipInt;
     }
